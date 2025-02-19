@@ -1,0 +1,23 @@
+<%- include('../layouts/header') %>
+<h1>Admin Dashboard</h1>
+<table>
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(record => { %>
+            <tr>
+                <td><%= record.user_id %></td>
+                <td><%= record.name %></td>
+                <td><%= record.date %></td>
+                <td><%= record.status %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+<%- include('../layouts/footer') %>

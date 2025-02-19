@@ -1,0 +1,23 @@
+<%- include('../layouts/header') %>
+<h1>Student Dashboard</h1>
+<form action="/student/markattendance" method="POST">
+    <button type="submit">Mark Attendance</button>
+</form>
+<h2>Your Attendance Records</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(record => { %>
+            <tr>
+                <td><%= record.date %></td>
+                <td><%= record.status %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+<%- include('../layouts/footer') %>
